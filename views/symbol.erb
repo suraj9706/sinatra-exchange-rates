@@ -1,0 +1,10 @@
+<h1>Convert <%= @symbol %> to...</h1>
+<ul>
+  <% @keys.each do |key| %>
+    <% next if key == @symbol %>
+    <li>
+      <a href="/<%= @symbol %>/<%= key %>">Convert 1 <%= @symbol %> to <%= key %>...</a>
+    </li>
+  <% end %>
+</ul>
+<a href="/">Back to home</a>
